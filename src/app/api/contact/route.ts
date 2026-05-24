@@ -19,7 +19,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           error:
-            "Contact form is not configured yet. Add Supabase env variables or email me directly.",
+            "Contact form is not configured. On Netlify, add NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY (or SUPABASE_URL and SUPABASE_ANON_KEY), then redeploy.",
         },
         { status: 503 },
       );
