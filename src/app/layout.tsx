@@ -17,21 +17,24 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Umer Makki | IT Professional & Developer",
+  title: "Umer Makki | Data Analyst & Zendesk Developer",
   description:
-    "Portfolio of Umer Makki — IT professional building modern web apps, full-stack solutions, and premium digital experiences.",
+    "Portfolio of Umer Makki — Data Analyst, Power BI, Python, SQL, Zendesk Suite, and machine learning. Based in Lahore, Pakistan.",
   keywords: [
     "Umer Makki",
-    "portfolio",
-    "web developer",
-    "IT professional",
-    "Next.js",
-    "React",
+    "Data Analyst",
+    "Power BI",
+    "Zendesk Developer",
+    "Python",
+    "SQL",
+    "Pakistan",
   ],
   openGraph: {
-    title: "Umer Makki | IT Professional",
-    description: "Modern portfolio — projects, services, and contact.",
+    title: "Umer Makki | Data Analyst & Zendesk Developer",
+    description:
+      "Data analytics, CRM automation, and IT support — projects, experience, and contact.",
     type: "website",
+    url: "https://umermakki.netlify.app",
   },
 };
 

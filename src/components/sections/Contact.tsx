@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
-import { Loader2, Mail, MapPin, Send } from "lucide-react";
+import { Loader2, Mail, MapPin, Phone, Send } from "lucide-react";
 import { site } from "@/data/site";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -56,7 +56,7 @@ export function Contact() {
             <SectionHeading
               eyebrow="Contact"
               title="Let's start a conversation"
-              description="Share your idea, timeline, and budget — no pressure, just an honest chat about fit."
+              description="Open to data, Zendesk, and IT support opportunities — let's connect."
             />
 
             <ul className="mt-10 space-y-5">
@@ -69,6 +69,18 @@ export function Contact() {
                     className="text-sm hover:text-[#7c6cff] transition-colors"
                   >
                     {site.email}
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-4 text-[var(--color-muted)]">
+                <Phone className="mt-0.5 h-5 w-5 shrink-0 text-[#7c6cff]" />
+                <div>
+                  <p className="text-sm font-medium text-foreground">Phone</p>
+                  <a
+                    href={`tel:${site.phone.replace(/[^\d+]/g, "")}`}
+                    className="text-sm hover:text-[#7c6cff] transition-colors"
+                  >
+                    {site.phone}
                   </a>
                 </div>
               </li>

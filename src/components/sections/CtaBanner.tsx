@@ -19,19 +19,19 @@ export function CtaBanner() {
           <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-[#38bdf8]/20 blur-[80px]" />
 
           <p className="relative font-mono text-xs uppercase tracking-[0.2em] text-[#7c6cff]">
-            Ready when you are
+            {site.availability}
           </p>
           <h2 className="relative mt-4 text-3xl font-bold tracking-tight md:text-4xl">
-            Let&apos;s build something{" "}
-            <span className="gradient-text">remarkable</span> together
+            Let&apos;s work on something{" "}
+            <span className="gradient-text">data-driven</span> together
           </h2>
           <p className="relative mx-auto mt-4 max-w-lg text-[var(--color-muted)]">
-            Tell me about your project — I typically reply within 24 hours with next steps
-            and a clear path forward.
+            Hiring for analytics, Zendesk, or IT support? I&apos;d love to hear about your team —
+            I typically reply within 24 hours.
           </p>
           <div className="relative mt-8 flex flex-wrap justify-center gap-4">
             <Button href="#contact" size="lg">
-              Book a conversation
+              Get in touch
               <ArrowRight className="h-4 w-4" />
             </Button>
             <Button href={`mailto:${site.email}`} variant="ghost" size="lg">

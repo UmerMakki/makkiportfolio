@@ -1,25 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Headphones, Layers, Palette } from "lucide-react";
+import { BarChart3, Brain, Headset, Monitor } from "lucide-react";
 import { services } from "@/data/site";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const icons = {
-  code: Code2,
-  layers: Layers,
-  palette: Palette,
-  headphones: Headphones,
+  chart: BarChart3,
+  zendesk: Headset,
+  it: Monitor,
+  brain: Brain,
 } as const;
 
 export function Services() {
   return (
-    <section id="services" className="section-padding bg-[var(--color-surface)]/50">
+    <section id="services" className="section-padding">
       <div className="container-wide">
         <SectionHeading
-          eyebrow="Services"
-          title="What I can do for you"
-          description="Agency-quality delivery — as a dedicated partner, not a faceless vendor."
+          eyebrow="Expertise"
+          title="What I bring to your team"
+          description="Analytics, CRM automation, IT support, and machine learning — from internship to production deployments."
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2">

@@ -10,8 +10,8 @@ export function About() {
       <div className="container-wide">
         <SectionHeading
           eyebrow="About"
-          title="Building digital products with clarity & craft"
-          description="I help teams and founders ship software that feels premium — without the bloat."
+          title="Data-driven thinking, reliable delivery"
+          description="BSCS graduate blending analytics, CRM platforms, and hands-on IT support."
         />
 
         <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-16">
@@ -23,17 +23,21 @@ export function About() {
             className="space-y-5 text-[var(--color-muted)] leading-relaxed"
           >
             <p>
-              I&apos;m <strong className="text-foreground">{site.name}</strong>, an IT
-              professional focused on modern web development, clean architecture, and
-              user-centered design. I turn ideas into production-ready applications —
-              from first wireframe to deployed product on Netlify or your cloud of choice.
+              I&apos;m <strong className="text-foreground">{site.name}</strong>,{" "}
+              {site.summary}
             </p>
             <p>
-              Whether you need a portfolio that stands out, a SaaS MVP, or ongoing
-              engineering support, I bring a calm, detail-oriented approach and clear
-              communication at every step.
+              I&apos;m targeting roles as a <strong className="text-foreground">Data Analyst</strong>,{" "}
+              <strong className="text-foreground">Power BI / BI Analyst</strong>,{" "}
+              <strong className="text-foreground">Junior Zendesk Developer</strong>, or{" "}
+              <strong className="text-foreground">IT / Systems Support Engineer</strong> — anywhere
+              data, customer experience, and solid operations meet.
             </p>
-            <p className="text-sm text-[var(--color-muted)]">{site.location}</p>
+            <p className="text-sm">
+              <span className="text-foreground">{site.location}</span>
+              {" · "}
+              {site.languages.join(" · ")}
+            </p>
           </motion.div>
 
           <motion.div
@@ -43,23 +47,23 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="glass card-hover rounded-2xl p-8 md:p-10"
           >
-            <h3 className="text-lg font-semibold text-foreground">How I work</h3>
+            <h3 className="text-lg font-semibold text-foreground">Key achievements</h3>
             <ul className="mt-6 space-y-5">
               {[
                 {
                   step: "01",
-                  title: "Discover",
-                  text: "Understand goals, users, and constraints before writing code.",
+                  title: "Zendesk for Zofeur UAE",
+                  text: "End-to-end production deployment with automations, QA, and multichannel workflows.",
                 },
                 {
                   step: "02",
-                  title: "Design & build",
-                  text: "Iterate in small releases with modern stack and measurable quality.",
+                  title: "25% efficiency at AI Neuralz",
+                  text: "Automated data processing pipelines for faster analytics delivery.",
                 },
                 {
                   step: "03",
-                  title: "Ship & support",
-                  text: "Deploy, monitor, and refine based on real feedback.",
+                  title: "Deep Learning FYP",
+                  text: "InceptionV3 model for pomegranate disease detection with transfer learning.",
                 },
               ].map((item) => (
                 <li key={item.step} className="flex gap-4">

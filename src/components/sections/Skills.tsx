@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { skills } from "@/data/site";
+import { skillCategories } from "@/data/site";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Skills() {
@@ -11,30 +11,36 @@ export function Skills() {
         <SectionHeading
           eyebrow="Skills"
           title="Tools & technologies"
-          description="The stack I reach for to ship fast, maintainable, and beautiful software."
+          description="The stack I use for analytics, CRM, IT operations, and machine learning."
           align="center"
         />
 
-        <motion.ul
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mx-auto mt-14 flex max-w-3xl flex-wrap justify-center gap-3"
-        >
-          {skills.map((skill, i) => (
-            <motion.li
-              key={skill}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+        <div className="mx-auto mt-14 grid max-w-4xl gap-8 sm:grid-cols-2">
+          {skillCategories.map((category, ci) => (
+            <motion.div
+              key={category.label}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.04 }}
-              whileHover={{ scale: 1.05, y: -2 }}
-              className="cursor-default rounded-full border border-[var(--color-border)] bg-[var(--color-surface-elevated)] px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition-shadow hover:border-[#7c6cff]/40 hover:shadow-[var(--shadow-glow)]"
+              transition={{ delay: ci * 0.06 }}
+              className="glass rounded-2xl p-6"
             >
-              {skill}
-            </motion.li>
+              <h3 className="font-mono text-xs uppercase tracking-[0.15em] text-[#7c6cff]">
+                {category.label}
+              </h3>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <li
+                    key={skill}
+                    className="rounded-full border border-[var(--color-border)] bg-white/5 px-3 py-1.5 text-sm text-foreground"
+                  >
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           ))}
-        </motion.ul>
+        </div>
       </div>
     </section>
   );

@@ -1,9 +1,12 @@
+export type ProjectAccent = "violet" | "cyan" | "pink" | "emerald";
+
 export type Project = {
   id: string;
   title: string;
   description: string;
   tags: string[];
-  image: string;
+  accent: ProjectAccent;
+  image?: string;
   href?: string;
   github?: string;
   featured?: boolean;
@@ -11,69 +14,57 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "ecommerce-platform",
-    title: "E-Commerce Platform",
+    id: "pomegranate-fyp",
+    title: "Pomegranate Disease Detection (FYP)",
     description:
-      "Full-stack storefront with cart, checkout, and admin dashboard. Built with Next.js and Supabase for real-time inventory.",
-    tags: ["Next.js", "Supabase", "Stripe"],
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
-    href: "#",
-    github: "#",
+      "Final Year Project: InceptionV3 deep learning model to detect pomegranate diseases and estimate spoilage — transfer learning, data augmentation, and precision agriculture insights.",
+    tags: ["TensorFlow", "InceptionV3", "Python", "Deep Learning"],
+    accent: "emerald",
     featured: true,
   },
   {
-    id: "saas-dashboard",
-    title: "SaaS Analytics Dashboard",
+    id: "zofeur-zendesk",
+    title: "Zofeur UAE — Zendesk Implementation",
     description:
-      "Data-rich admin panel with charts, role-based access, and dark-mode UI optimized for daily power users.",
-    tags: ["React", "TypeScript", "Tailwind"],
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    href: "#",
-    github: "#",
+      "Production Zendesk Suite deployment: multichannel support (email, chat, web forms), automated triggers & macros, SLA policies, and full QA validation for a live client.",
+    tags: ["Zendesk Suite", "Automation", "SLA", "QA"],
+    accent: "violet",
     featured: true,
   },
   {
-    id: "agency-landing",
-    title: "Agency Landing Page",
+    id: "zomato-eda",
+    title: "Zomato Exploratory Data Analysis",
     description:
-      "High-converting marketing site with scroll animations, CMS-ready sections, and sub-second load times.",
-    tags: ["Next.js", "Framer Motion", "Netlify"],
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-    href: "#",
+      "Python EDA on the Zomato dataset — preprocessing, visualizations (count plots, heatmaps, box plots), and actionable business insights from trends and patterns.",
+    tags: ["Python", "Pandas", "Matplotlib", "EDA"],
+    accent: "cyan",
     featured: true,
   },
   {
-    id: "task-app",
-    title: "Team Task Manager",
+    id: "pandas-analysis",
+    title: "Data Analysis with Pandas",
     description:
-      "Collaborative task board with drag-and-drop, notifications, and offline-friendly PWA support.",
-    tags: ["React", "Supabase", "PWA"],
-    image:
-      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&q=80",
-    github: "#",
+      "Structured data exploration pipeline: DataFrame manipulation, duplicate handling, missing data treatment, and insight generation for analytical reporting.",
+    tags: ["Pandas", "Python", "Data Cleaning"],
+    accent: "pink",
+    github: "https://github.com/UmerMakki",
   },
   {
-    id: "portfolio-template",
-    title: "Developer Portfolio Kit",
+    id: "power-bi-dashboards",
+    title: "Power BI KPI Dashboards",
     description:
-      "Reusable portfolio template with project grid, contact form, and SEO best practices out of the box.",
-    tags: ["Next.js", "TypeScript"],
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
-    href: "#",
-    github: "#",
+      "Interactive dashboards with DAX queries for real-time KPI reporting — built during AI Neuralz internship for data-driven stakeholder decisions.",
+    tags: ["Power BI", "DAX", "KPI Reporting"],
+    accent: "violet",
   },
   {
-    id: "api-gateway",
-    title: "API Integration Service",
+    id: "portfolio-site",
+    title: "Personal Portfolio (This Site)",
     description:
-      "Middleware layer connecting third-party APIs with caching, rate limiting, and structured logging.",
-    tags: ["Node.js", "PostgreSQL", "Redis"],
-    image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
-    github: "#",
+      "Modern Next.js portfolio with Framer Motion, Supabase contact form, and Netlify deployment — showcasing my work and professional profile.",
+    tags: ["Next.js", "TypeScript", "Supabase", "Netlify"],
+    accent: "cyan",
+    href: "https://umermakki.netlify.app",
+    github: "https://github.com/UmerMakki/makkiportfolio",
   },
 ];
