@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+
+  --color-bg: #07080d;
+  --color-surface: #0f1118;
+  --color-surface-elevated: #161922;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-muted: #8b92a8;
+  --color-foreground: #f4f5f9;
+  --color-accent: #7c6cff;
+  --color-accent-secondary: #38bdf8;
+  --color-accent-warm: #f472b6;
+
+  --shadow-glow: 0 0 60px -12px rgba(124, 108, 255, 0.45);
+  --shadow-card: 0 24px 48px -24px rgba(0, 0, 0, 0.65);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(124, 108, 255, 0.35);
+  color: #fff;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #c4b5fd 0%, #7c6cff 40%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mesh-bg {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124, 108, 255, 0.22), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(56, 189, 248, 0.12), transparent),
+    radial-gradient(ellipse 50% 30% at 0% 50%, rgba(244, 114, 182, 0.08), transparent),
+    var(--color-bg);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 20%, transparent 75%);
+}
+
+.glass {
+  background: rgba(15, 17, 24, 0.72);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+}
+
+.card-hover {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+  border-color: rgba(124, 108, 255, 0.35);
+}
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #7c6cff 0%, #5b4fd9 50%, #38bdf8 100%);
+  background-size: 200% 200%;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-position 0.4s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 40px -8px rgba(124, 108, 255, 0.55);
+  background-position: 100% 50%;
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-ghost {
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.03);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.btn-ghost:hover {
+  transform: translateY(-2px);
+  border-color: rgba(124, 108, 255, 0.45);
+  background: rgba(124, 108, 255, 0.08);
+}
+
+.section-padding {
+  @apply px-5 py-24 md:px-8 md:py-32 lg:px-12;
+}
+
+.container-wide {
+  @apply mx-auto max-w-6xl;
+}
